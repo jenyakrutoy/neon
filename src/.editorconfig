@@ -1,0 +1,10 @@
+# editorconfig.org
+root = true
+[*]
+indent_style = space #имитирование пробелов в табуляции
+indent_size = 2 #кол-во пробелов табуляции
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true #отрезание ненужных пробелов
+insert_final_newline = false #вставка пустой строки в конце файлов
+[*.md]

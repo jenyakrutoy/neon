@@ -1,0 +1,327 @@
+@import "normalize";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Regular.eot");
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Bold.eot");
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/RobotoBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: url("TTFirsNeue-Regular.eot");
+  src: local("TTFirsNeue Regular"), local("TTFirsNeue-Regular"),
+    url("../fonts/TTFirsNeue-Regular.woff2") format("woff2"), url("../fonts/TTFirsNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: url("TTFirsNeue-Medium.eot");
+  src: local("TTFirsNeue Medium"), local("TTFirsNeue-Medium"), url("../fonts/TTFirsNeue-Medium.woff2") format("woff2"),
+    url("../fonts/TTFirsNeue-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: url("TTFirsNeue-Bold.eot");
+  src: local("TTFirsNeue Bold"), local("TTFirsNeue-Bold"), url("../fonts/TTFirsNeue-Bold.woff2") format("woff2"),
+    url("../fonts/TTFirsNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("Muller-Muller.eot");
+  src: local("Muller Muller"), local("Muller-Bold"), url("../fonts/Muller-Regular.woff2") format("woff2"),
+    url("../fonts/Muller-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border: none;
+  outline: none;
+}
+
+// скрываем alt
+img:not([src]) {
+  visibility: hidden;
+}
+
+picture {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+// отключение скролла в бургере
+.no-scroll {
+  overflow: hidden;
+}
+
+:root {
+  --white: #ffffff;
+  --white2: #e9e9e9;
+  --grey: #cacaca;
+  --grey2: #999999;
+  --grey3: #4a4a4a;
+  --grey4: #808080;
+  --black: #202020;
+  --black2: rgba(32, 32, 32, 0.85);
+  --orange: #ff6e30;
+  --dark-orange: #bc572b;
+  --pink: #ff3030;
+  --pink2: #ce4307;
+  --pink3: #f06666;
+  --orange-light: #ffd4c1;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 21px;
+
+  @media (min-width: 768px) {
+    min-width: 768px;
+    padding: 0 27px;
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 1024px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+    padding: 0 315px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  color: var(--white);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s linear, outline 0.2s linear;
+
+  &:focus-visible {
+    background-color: var(--orange);
+    outline: 3px solid var(--pink2);
+  }
+
+  // .btn:hover
+  &:hover {
+    background-color: var(--dark-orange);
+  }
+
+  // .btn:active
+  &:active {
+    background-color: var(--pink2);
+  }
+}
+
+.btn-transparent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 22px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--white);
+  background-color: var(--orange);
+  border: 3px solid var(--orange);
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s linear, outline 0.1s linear;
+
+  // .btn-transparent:focus-visible
+  &:focus-visible {
+    background-color: var(--dark-orange);
+  }
+
+  // .btn-transparent:hover
+  &:hover {
+    background-color: var(--orange);
+  }
+
+  // .btn-transparent:active
+  &:active {
+    background-color: var(--pink2);
+    border: 3px solid var(--pink2);
+  }
+}
+
+.title-h2 {
+  font-family: "TTFirsNeue";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.title-h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.tel {
+  // .tel:hover path
+  &:hover path {
+    fill: var(--white);
+  }
+
+  // .tel:active path
+  &:active path {
+    fill: var(--white);
+  }
+
+  // .tel__mob
+  &__mob {
+    display: inline-flex;
+    align-items: center;
+    margin: 2px 0px 9px 20px;
+    font-family: "TTFirsNeue";
+    color: var(--orange);
+    transition: color 0.2s linear, outline 0.2s linear;
+
+    // .tel__mob:hover
+    :hover {
+      color: var(--white);
+    }
+
+    // .tel__mob:active
+    :active {
+      color: var(--white);
+    }
+
+    // .tel__mob:focus-visible
+    &:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 3px;
+    }
+  }
+
+  // .tel__svg
+  &__svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+.contacts-burger {
+  width: 20px;
+  height: 19px;
+  outline: none;
+  border: none;
+  background: url("../img/icons-sprite/x.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: var(--grey4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s linear, outline 0.2s linear;
+
+  &:hover {
+    background-color: var(--orange);
+  }
+
+  &:active {
+    background-color: var(--pink2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 3px;
+  }
+}
+
+// !/* =======================================валидация===========================================*/
+
+.js-validate-error-label {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+}
+
+// !/* ==========================карта (удаление лишнего) + СЕРЫЙ ФОН===========================================*/
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+@import "sections/_header";
+@import "sections/_neon";
+@import "sections/_studio";
+@import "sections/_projects";
+@import "sections/_contacts";
+@import "sections/_footer";

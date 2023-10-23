@@ -1,0 +1,311 @@
+// !/* ==========================стили для 320=====================================*/
+
+.footer {
+  @media (min-width: 768px) {
+    padding: 22px 0;
+    background: var(--black);
+  }
+
+  // .footer__wrap-320
+  &__wrap-320 {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  // .footer__item-320
+  &__item-320 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .footer__item-icons-320
+  &__item-icons-320 {
+    padding: 31px 0;
+    background: var(--black);
+  }
+
+  // .footer__caption-320
+  &__caption-320 {
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--grey);
+  }
+
+  // .footer__inner-320
+  &__inner-320 {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  // .footer__link-320
+  &__link-320 {
+    max-height: 30px;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+
+    // .footer__link-320:last-child
+    &:last-child {
+      margin-right: 0;
+    }
+
+    // .footer__link-320:focus-visible path
+    &:focus-visible path {
+      fill: var(--dark-orange);
+    }
+
+    // .footer__link-320:hover path
+    &:hover path {
+      fill: var(--orange);
+    }
+
+    // .footer__link-320:active path
+    &:active path {
+      fill: var(--pink2);
+    }
+  }
+
+
+  // .footer__svg-320
+  &__svg-320 {
+    min-width: 30px;
+  }
+
+  // .footer__svg-320
+  &__svg-320 {
+    min-width: 30px;
+  }
+
+  // .footer__item-logo-320
+  &__item-logo-320 {
+    padding: 14px 0;
+    flex-direction: column;
+    background: var(--grey3);
+  }
+
+  // .footer__logo
+  &__logo-320 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+  }
+
+  // .footer__img-320
+  &__img-320 {
+    width: 17.59px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  // .footer__svg-logo-320
+  &__svg-logo-320 {
+    min-width: 89px;
+    padding-top: 2px;
+    padding-left: 11px;
+  }
+
+  // .footer__item-logo-text-320
+  &__item-logo-text-320 {
+    font-family: "TTFirsNeue";
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: var(--white2);
+  }
+
+  // !/* ==========================стили для 576-1920=====================================*/
+
+  // .footer__container
+  &__container {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  // .footer__wrap
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  // .footer__item
+  &__item {
+    display: flex;
+  }
+
+  // .footer__item-logo
+  &__item-logo {
+    flex-direction: column;
+    padding-top: 10px;
+
+    @media (min-width: 1024px) {
+      max-width: 263px;
+      padding-top: 8px;
+    }
+
+    @media (min-width: 1920px) {
+      padding-top: 5px;
+      margin-right: 0;
+    }
+  }
+
+  // .footer__logo
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    align-self: start;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+    transition: outline 0.2s linear;
+
+    // .footer__logo:focus-visible
+    &:focus-visible {
+      outline: 3px solid var(--pink2);
+    }
+  }
+
+  // .footer__img
+  &__img {
+    width: 17.59px;
+
+    @media (min-width: 1024px) {
+      width: 26.18px;
+      height: 26.18px;
+    }
+
+    @media (min-width: 1920px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  // .footer__svg-logo
+  &__svg-logo {
+    min-width: 140px;
+    max-width: 140px;
+    padding-left: 10px;
+
+    @media (min-width: 1024px) {
+      min-width: 141px;
+      max-width: 141px;
+      padding-left: 13px;
+    }
+
+    @media (min-width: 1920px) {
+      min-width: 162px;
+      max-width: 162px;
+    }
+  }
+
+  // .footer__item-logo-text
+  &__item-logo-text {
+    font-family: "TTFirsNeue";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--white2);
+  }
+
+  // .footer__item-text
+  &__item-text {
+    @media (min-width: 1024px) {
+      max-width: 361px;
+      margin-right: 68px;
+    }
+
+    @media (min-width: 1920px) {
+      margin-right: 129px;
+    }
+  }
+
+  // .footer__text
+  &__text {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--grey);
+    }
+  }
+
+  // .footer__item-icons
+  &__item-icons {
+    @media (min-width: 1024px) {
+      max-width: 163px;
+    }
+  }
+
+  // .footer__icons
+  &__icons {
+    padding-top: 3px;
+  }
+
+  // .footer__caption
+  &__caption {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--grey);
+  }
+
+  // .footer__inner
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80px;
+    margin: 0 auto;
+  }
+
+  // .footer__link
+  &__link {
+    max-height: 30px;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+
+    // .footer__link:last-child
+    &:last-child {
+      margin-right: 0;
+    }
+
+    // .footer__link-320:focus-visible path
+    &:focus-visible path {
+      color: var(--dark-orange);
+    }
+
+    // .footer__link-320:hover path
+    &:hover path {
+      fill: var(--orange);
+    }
+
+    // .footer__link-320:active path
+    &:active path {
+      fill: var(--pink2);
+    }
+  }
+
+  // .footer__svg
+  &__svg {
+    min-width: 30px;
+  }
+}
